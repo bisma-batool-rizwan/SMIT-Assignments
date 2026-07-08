@@ -1,0 +1,161 @@
+#Q1 — Online Food Delivery System 
+print("==========Q1 — Online Food Delivery System ==========")
+foods = ["Burger", "Pizza", "Fries", "Broast", "Sandwich"]
+print("First Food Item  :  ",foods[0])
+print("Last Food item  :  ",foods[-1])
+foods[2] = "Pasta"
+foods.append("Zinger")
+foods.insert(2,"Shawarma")
+foods.remove("Pizza")
+foods.pop(-1)
+print(len(foods))
+print(foods[0:3])
+print(foods[::-2])
+print(foods.reverse())
+foods.sort()
+print("Updated List  :  ",foods)
+
+#Q2 — Student Attendance Management
+print("==========Q2 — Student Attendance Management==========")
+students = ["Ali", "Sara", "Ahmed", "Zoha Khan", "Hira"] 
+print("Second Student  :  ",students[1])
+print("Last Student  :  ",students[-1])
+students[2] = "Hamza"
+students.append("Fatima")
+students.insert(1,"Ayesha")  
+students.remove("Sara")
+students.pop(3)
+print("Total Students :  ",len(students))
+print(students[1:5])
+students.reverse()
+print("Final lisr  :  ",students)   
+
+
+# Q3 — Mobile Prices Analysis
+print("==========Q3 — Mobile Prices Analysis==========")
+prices = [45000, 120000, 30000, 85000, 60000]
+prices.sort()
+print("Highest Price  :  ", prices[-1])
+print("Lowest Price  :  ", prices[0])
+prices.sort()
+print("Ascending Order  :  ", prices)
+prices.sort(reverse=True)
+print("Descending Order  :  ", prices)
+prices.append(95000)
+prices.remove(60000)
+prices.pop(-1)
+print(prices[0:3])
+print(prices[::-2])
+print("Total Prices  :  ", len(prices))
+
+
+# Q4 — Cricket Team Management
+print("==========Q4 — Cricket Team Management==========")
+players = ["Babar", "Rizwan", "Shaheen", "Naseem", "Shadab"]
+print("Captain Name  :  ", players[0])
+print("Last Player  :  ", players[-1])
+players[4] = "Imad"
+players.append("Hasan")
+players.insert(2, "Fakhar")
+players.remove("Naseem")
+print(players[0:4])
+print(players[::-3])
+players.reverse()
+print("Final Squad  :  ", players)
+
+
+# Q5 — Shopping Cart System
+print("==========Q5 — Shopping Cart System==========")
+cart = ["Shoes", "Watch", "Bag", "Laptop", "Bottle"]
+print("First Item  :  ", cart[0])
+print("Last Item  :  ", cart[-1])
+cart[4] = "Headphones"
+cart.append("Keyboard")
+cart.insert(1, "Mouse")
+cart.remove("Bag")
+cart.pop(-1)
+print("Total Items  :  ", len(cart))
+print(cart[1:4])
+cart.reverse()
+print("Updated Cart  :  ", cart)
+
+
+# Q6 — Employee Salary Records
+print("==========Q6 — Employee Salary Records==========")
+salaries = [25000, 40000, 70000, 55000, 90000]
+print("Highest Salary  :  ", max(salaries))
+print("Lowest Salary  :  ", min(salaries))
+salaries.sort()
+print("Ascending  :  ", salaries)
+salaries.sort(reverse=True)
+print("Descending  :  ", salaries)
+salaries.append(65000)
+salaries.remove(40000)
+print("Second Highest Salary  :  ", salaries[1])
+print(salaries[0:3])
+print("Total Salaries  :  ", len(salaries))
+print("Final Salary List  :  ", salaries)
+
+
+# Q7 — Movie Collection System
+print("========== Q7 — Movie Collection System==========")
+movies = ["Avatar", "Inception", "Joker", "Titanic", "Interstellar"]
+print("First Movie  :  ", movies[0])
+print("Last Movie  :  ", movies[-1])
+movies[2] = "Batman"
+movies.append("Avengers")
+movies.insert(3, "Iron Man")
+movies.remove("Titanic")
+movies.pop(-1)
+print(movies[0:4])
+movies.reverse()
+print("Final Movie Collection  :  ", movies)
+
+
+# Q8 — Exam Marks Analysis
+print("==========Q8 — Exam Marks Analysis==========")
+marks = [78, 45, 90, 66, 82]
+print("Highest Marks  :  ", max(marks))
+print("Lowest Marks  :  ", min(marks))
+marks.sort()
+print("Ascending  :  ", marks)
+marks.sort(reverse=True)
+print("Descending  :  ", marks)
+marks.append(88)
+marks.remove(45)
+print(marks[0:3])
+print(marks[::-2])
+print("Total Subjects  :  ", len(marks))
+print("Final Marks List  :  ", marks)
+
+
+#Q8 — Exam Marks Analysis
+print("==========Q8 — Exam Marks Analysis==========")
+visitors = ["Ali", "Sara", "Ahmed", "Zoha Khan", "Hira"]
+print("First Visitor  :  ", visitors[0])
+print("Last Visitor  :  ", visitors[-1])
+visitors.append("Hamza")
+visitors.insert(2, "Ayesha")
+visitors.remove("Ahmed")
+visitors.pop(-1)
+print(visitors[0:3])
+print(visitors[::-3])
+visitors.reverse()
+print("Total Visitors  :  ", len(visitors))
+print("Final Visitors List  :  ", visitors)
+
+
+# Q10 — Programming Languages System
+print("==========Q10 — Programming Languages System==========")
+languages = ["Python", "JavaScript", "Java", "C++", "PHP"]
+print("First Language  :  ", languages[0])
+print("Last Language  :  ", languages[-1])
+languages[4] = "TypeScript"
+languages.append("Go")
+languages.insert(2, "Rust")
+languages.remove("Java")
+print(languages[0:4])
+print(languages[::-2])
+languages.sort()
+languages.reverse()
+print("Final Updated Languages  :  ", languages)
