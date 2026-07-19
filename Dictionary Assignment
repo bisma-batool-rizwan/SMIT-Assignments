@@ -1,0 +1,216 @@
+# ==============================
+# Question 1 — Student Profile System
+# ==============================
+
+student = {
+    "name": "Bisma",
+    "age": 16,
+    "city": "Karachi",
+    "hobbies": ["Cricket", "Reading", "Gaming"],
+    "skills": ["Python", "HTML", "CSS"]
+}
+
+print("----- Question 1 -----")
+print("Student Name:", student["name"])
+print("First Hobby:", student["hobbies"][0])
+print("Total Skills:", len(student["skills"]))
+
+
+# ==============================
+# Question 2 — Student Marks System
+# ==============================
+
+marks = {
+    "subjects": {
+        "math": 85,
+        "english": 78,
+        "science": 90,
+        "computer": 95
+    }
+}
+
+print("\n----- Question 2 -----")
+print("All Subject Marks:")
+
+for subject, mark in marks["subjects"].items():
+    print(subject, ":", mark)
+
+total = sum(marks["subjects"].values())
+average = total / len(marks["subjects"])
+
+print("Total Marks:", total)
+print("Average Marks:", average)
+
+
+# ==============================
+# Question 3 — Grade Checking System
+# ==============================
+
+print("\n----- Question 3 -----")
+
+if average >= 80:
+    grade = "A"
+elif average >= 70:
+    grade = "B"
+elif average >= 60:
+    grade = "C"
+else:
+    grade = "Fail"
+
+print("Final Grade:", grade)
+
+if average >= 60:
+    print("Passed")
+else:
+    print("Failed")
+
+
+# ==============================
+# Question 4 — Attendance Management System
+# ==============================
+
+attendance = {
+    "total_classes": 100,
+    "attended_classes": 82
+}
+
+print("\n----- Question 4 -----")
+
+attendance_percentage = (attendance["attended_classes"] / attendance["total_classes"]) * 100
+
+print("Attendance Percentage:", attendance_percentage)
+
+if attendance_percentage < 75:
+    print("Short Attendance")
+else:
+    print("Eligible For Exam")
+
+
+# ==============================
+# Question 5 — Fee Management System
+# ==============================
+
+student["fee_paid"] = True
+
+print("\n----- Question 5 -----")
+
+if student["fee_paid"]:
+    fee_status = "Fee Cleared"
+else:
+    fee_status = "Fee Pending"
+
+print(fee_status)
+
+
+# ==============================
+# Question 6 — Skills Management System
+# ==============================
+
+print("\n----- Question 6 -----")
+
+student["skills"].append("JavaScript")
+student["skills"].remove("HTML")
+
+print("Updated Skills:", student["skills"])
+print("Total Skills:", len(student["skills"]))
+
+
+# ==============================
+# Question 7 — Login Authentication System
+# ==============================
+
+login = {
+    "username": "admin",
+    "password": "12345"
+}
+
+print("\n----- Question 7 -----")
+
+username = input("Enter Username: ")
+password = input("Enter Password: ")
+
+if username == login["username"] and password == login["password"]:
+    print("Login Successful")
+else:
+    print("Invalid Credentials")
+
+
+# ==============================
+# Question 8 — Address Management System
+# ==============================
+
+student["address"] = {
+    "area": "Gulshan",
+    "street": "Street 5",
+    "house_number": "A-25"
+}
+
+print("\n----- Question 8 -----")
+
+print("Complete Address:")
+print(student["address"])
+
+student["address"]["area"] = "North Nazimabad"
+student["address"]["zip_code"] = "74700"
+
+print("Updated Address:")
+print(student["address"])
+
+
+# ==============================
+# Question 9 — Multiple Students Database
+# ==============================
+
+students = {
+    "student1": {
+        "name": "Bisma",
+        "city": "Karachi",
+        "marks": 350
+    },
+    "student2": {
+        "name": "Ahmed",
+        "city": "Lahore",
+        "marks": 370
+    }
+}
+
+print("\n----- Question 9 -----")
+
+print("Student1 Name:", students["student1"]["name"])
+print("Student2 Marks:", students["student2"]["marks"])
+
+students["student2"]["city"] = "Islamabad"
+
+print("Updated Student2 City:", students["student2"]["city"])
+
+
+# ==============================
+# Question 10 — Final Student Report Card System
+# ==============================
+
+print("\n========== REPORT CARD ==========")
+
+print("Profile")
+print("Name:", student["name"])
+print("Age:", student["age"])
+print("City:", student["city"])
+
+print("\nMarks")
+for subject, mark in marks["subjects"].items():
+    print(subject, ":", mark)
+
+print("\nTotal:", total)
+print("Average:", average)
+print("Grade:", grade)
+
+print("\nAttendance:", attendance_percentage, "%")
+
+print("Fee Status:", fee_status)
+
+print("Skills:", student["skills"])
+
+print("Address:")
+for key, value in student["address"].items():
+    print(key, ":", value)
+
+print("================================")
