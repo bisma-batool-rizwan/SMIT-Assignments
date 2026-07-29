@@ -1,0 +1,164 @@
+
+# USING WHILE LOOP
+
+# 1. Print numbers from 1 to 100
+
+print("Question 1")
+
+i = 1
+
+while i <= 100:
+    print(i)
+    i += 1
+
+# 2. Print numbers from 100 to 1
+
+print("Question 2")
+
+i = 100
+
+while i >= 1:
+    print(i)
+    i -= 1
+
+# 3. Multiplication Table
+
+print("Question 3")
+
+n = int(input("Enter a number: "))
+
+i = 1
+
+while i <= 10:
+    print(n, "x", i, "=", n * i)
+    i += 1
+
+# 4. Print List Elements
+
+print("Question 4")
+
+numbers = [12, 45, 8, 23, 67, 34, 90, 15, 56, 78]
+
+i = 0
+
+while i < len(numbers):
+    print(numbers[i])
+    i += 1
+
+
+# 5. Search Number in Tuple
+
+print("Question 5")
+
+numbers = (18, 45, 72, 91, 34, 56, 29, 83, 67, 10)
+
+x = int(input("Enter number to search: "))
+
+i = 0
+found = False
+
+while i < len(numbers):
+    if numbers[i] == x:
+        print("Found at index", i)
+        found = True
+        break
+    i += 1
+
+if found == False:
+    print("Number Not Found")
+
+
+
+# 6. Sum of First Natural Numbers
+
+print("Question 6")
+
+n = (1,2,3,4,5)
+
+i = 1
+sum = 0
+
+while i <= n:
+    sum += i
+    i += 1
+
+print("Sum =", sum)
+
+# USING FOR LOOP
+
+# 1. Print List Elements
+
+print("Question 1")
+
+fruits = ["Apple","Banana","Mango","Orange","Grapes","Peach","Cherry","Guava","Pineapple", "Watermelon"]
+
+for fruit in fruits:
+    print(fruit)
+
+
+
+
+# 2. Search String in Tuple
+
+print("Question 2")
+
+cities = ("Karachi","Lahore","Islamabad","Peshawar","Quetta","Multan","Hyderabad","Faisalabad","Sialkot","Sukkur")
+
+city = input("Enter city name: ")
+
+found = False
+
+for c in cities:
+    if c == city:
+        found = True
+        break
+
+if found:
+    print("City Found")
+else:
+    print("City Not Found")
+
+
+# 3. Factorial
+
+print("Question 3")
+
+n = int(input("Enter a number: "))
+
+factorial = 1
+
+for i in range(1, n + 1):
+    factorial *= i
+
+print("Factorial =", factorial)
+
+# USING RANGE()
+
+# 1. Print numbers from 1 to 100
+
+print("Question 1")
+
+for i in range(1, 101):
+    print(i)
+
+
+
+
+# 2. Print numbers from 100 to 1
+
+print("Question 2")
+
+for i in range(100, 0, -1):
+    print(i)
+
+
+
+
+# 3. Multiplication Table
+
+print("Question 3")
+
+n = int(input("Enter a number: "))
+
+for i in range(1, 11):
+    print(n, "x", i, "=", n * i)
