@@ -1,0 +1,61 @@
+# Q1 - Length of a List
+
+def list_length(my_list):
+    print("Length of list is:", len(my_list))
+
+numbers = input("Enter List : ")
+list_length(numbers)
+
+# Q2 - Print List in One Line
+
+
+def print_list(my_list):
+    for item in my_list:
+        print(item, end=" ")
+
+fruits = ["Apple", "Banana", "Mango", "Orange"]
+
+print_list(fruits)
+
+
+# Q3 - Factorial
+
+def factorial(n):
+    fact = 1
+
+    for i in range(1, n + 1):
+        fact = fact * i
+
+    return fact
+
+
+num = int(input("\n\nEnter a number: "))
+print("Factorial is:", factorial(num))
+
+
+
+# Q4 - PKR to USD
+
+
+def pkr_to_usd(pkr, rate):
+    usd = pkr / rate
+    return usd
+
+
+pkr = float(input("\nEnter PKR: "))
+rate = float(input("Enter USD Rate: "))
+
+print("USD =", pkr_to_usd(pkr, rate))
+
+
+# Q5 - Even or Odd
+
+def even_odd(num):
+    if num % 2 == 0:
+        return "Even Number"
+    else:
+        return "Odd Number"
+
+
+number = int(input("\nEnter a number: "))
+print(even_odd(number))
