@@ -1,0 +1,129 @@
+import pygame
+import random
+
+pygame.init()
+
+# Screen
+WIDTH = 600
+HEIGHT = 400
+BLOCK = 20
+
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Snake Game")
+
+# Colors
+WHITE = (255, 255, 255)
+GREEN = (0, 200, 0)
+RED = (255, 0, 0)
+BLACK = (0, 0, 0)
+
+clock = pygame.time.Clock()
+font = pygame.font.SysFont("Arial", 25)
+
+
+def show_score(score):
+    text = font.render(f"Score: {score}", True, BLACK)
+    screen.blit(text, (10, 10))
+
+
+def game():
+    snake = [(100, 100)]
+    direction = (BLOCK, 0)
+
+    food = (
+        random.randrange(0, WIDTH, BLOCK),
+        random.randrange(0, HEIGHT, BLOCK),
+    )
+
+    score = 0
+    running = True
+
+    while running:
+        clock.tick(10)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_UP and direction != (0, BLOCK):
+                    direction = (0, -BLOCK)
+
+                elif event.key == pygame.K_DOWN and direction != (0, -BLOCK):
+                    direction = (0, BLOCK)
+
+                elif event.key == pygame.K_LEFT and direction != (BLOCK, 0):
+                    direction = (-BLOCK, 0)
+
+                elif event.key == pygame.K_RIGHT and direction != (-BLOCK, 0):
+                    direction = (BLOCK, 0)
+
+        head_x = snake[0][0] + direction[0]
+        head_y = snake[0][1] + direction[1]
+
+        new_head = (head_x, head_y)
+
+        if (
+            head_x < 0
+            or head_x >= WIDTH
+            or head_y < 0
+            or head_y >= HEIGHT
+            or new_head in snake
+        ):
+            running = False
+
+        snake.insert(0, new_head)
+
+        if new_head == food:
+            score += 1
+            food = (
+                random.randrange(0, WIDTH, BLOCK),
+                random.randrange(0, HEIGHT, BLOCK),
+            )
+        else:
+            snake.pop()
+
+        screen.fill(WHITE)
+
+        pygame.draw.rect(screen, RED, (food[0], food[1], BLOCK, BLOCK))
+
+        for segment in snake:
+            pygame.draw.rect(screen, GREEN, (segment[0], segment[1], BLOCK, BLOCK))
+
+        show_score(score)
+
+        pygame.display.update()
+
+    game_over(score)
+
+
+def game_over(score):
+    while True:
+        screen.fill(WHITE)
+
+        text = font.render(f"Game Over! Score: {score}", True, RED)
+        restart = font.render("Press R to Restart or Q to Quit", True, BLACK)
+
+        screen.blit(text, (150, 150))
+        screen.blit(restart, (100, 200))
+
+        pygame.display.update()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                return
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_r:
+                    game()
+                    return
+
+                elif event.key == pygame.K_q:
+                    pygame.quit()
+                    return
+
+
+game()
+
+pygame.quit()
